@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.flex {
+    display: flexbox;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.imagen{
+    width: 300px;
+    height: 170px;
+}
