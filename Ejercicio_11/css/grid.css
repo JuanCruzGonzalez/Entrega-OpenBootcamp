@@ -1,0 +1,33 @@
+.item {
+    background-color: aqua;
+    border: 2px solid black;
+    margin: 0.5rem;
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+    }
+}

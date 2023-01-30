@@ -8,6 +8,7 @@
     margin: 200px 40%;
     border-bottom: 2px solid black;
     border-radius: 7px;
+    color: rgb(68, 61, 61);
 }
 .btn-modern:hover {
     transform: translateY(5px);
