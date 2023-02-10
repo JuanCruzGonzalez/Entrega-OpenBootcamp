@@ -108,14 +108,23 @@
       </div>
     </div>
     <div class="card" style="width: 18rem; margin: 2rem;">
-        <div class="card-body">
-          <h5 class="card-title">Juan Cruz Gonzalez</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Desarrollador Web</h6>
-          <p class="card-text">Soy un desarrollador web con experiencia en HTML, CSS, JS y PHP</p>
-        </div>
-        <div class="card-footer">
-            juancgonzalez0901@gmail.com
-          </div>
+      <div class="card-body">
+        <h5 class="card-title">Juan Cruz Gonzalez</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Desarrollador Web</h6>
+        <p class="card-text">Soy un desarrollador web con experiencia en HTML, CSS, JS y PHP</p>
       </div>
+      <div class="card-footer">
+          juancgonzalez0901@gmail.com
+      </div>
+  </div>
+  <input type="text" id="inputText">
+<button onclick="showMessage()">Show Message</button>
+<p id="messageDisplay"></p>
   </body>
+  <script>
+    function showMessage() {
+  var inputValue = document.getElementById("inputText").value;
+  document.getElementById("messageDisplay").innerHTML = inputValue;
+}
+  </script>
 </html>

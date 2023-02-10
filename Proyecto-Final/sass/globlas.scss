@@ -1,0 +1,223 @@
+@use "components";
+
+@mixin section-display {
+    width: 100%;
+    padding: 3rem;
+    max-width: 992px;
+    margin: auto;
+}
+
+html{
+    min-width: 100vw;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-bottom: solid 1px #ddd;
+    div{
+        img {
+            height: 4rem;
+            width: 7rem;
+        }
+    }
+}
+
+.sec-home {
+    @include section-display();
+    display: flex;
+    align-items: center;
+    .home-cta{
+        flex: 1;
+        .cta-text {
+            color: components.$color-main;
+        }
+        .home-title {
+            width: 20rem;
+            font-size: 3.2rem;
+        }
+        .home-description {
+            width: 21rem;
+        }
+    }
+    img {
+        width: 15rem;
+        height: 30rem;
+        margin: 2rem;
+    }
+}
+
+.sec-features {
+    @include section-display();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .intro {
+        text-align: center;
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #888;
+            font-size: 0.8rem;
+        }
+    }
+    .features {
+        display: flex;
+        gap: 1rem;
+        .text {
+            padding: 2rem 0;
+            flex: 1;
+            .feature {
+                padding-top: 2rem;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                .description {
+                    max-width: 20rem;
+                    margin-left: 1rem;
+                    width: 19rem;
+                    .description-title {
+                        font-size: 1.4rem;
+                    }
+                    .description-text {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .image {
+            img {
+                max-width: 40rem;
+            }
+        }
+    }
+}
+
+.sec-benefits {
+    border-top: solid 1px #ddd;
+    @media screen and (max-width:768px) {
+        .benefit-cards {
+            margin: 0 8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .intro {
+            text-align: center;
+        }
+    }
+    .intro {
+        @extend .sec-features, .intro;        
+    }
+    .benefit-cards {
+        margin: 0 8rem;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.sec-kpis {
+    background-color: components.$color-main;
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    align-items: center;
+    .kpi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: white;
+        }
+        p {
+            color: #ffffffaa;
+        }
+    }
+    @media screen and (max-width:768px) {
+        .kpi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+                font-size: 2rem;
+                font-weight: 600;
+                color: white;
+            }
+            p {
+                font-size: 0.7rem;
+                color: #ffffffaa;
+            }
+        }
+    }
+}
+
+.sec-on-boarding {
+    border-top: solid 1px #ddd;
+    @media screen and (max-width:768px) {
+        .bording-cards {
+            margin: 0 8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        hr {
+            color: white
+        }
+        .intro {
+            text-align: center;
+        }
+    }
+    .intro {
+        @extend .sec-features, .intro;        
+    }
+    
+    @media screen and (min-width:769px) {
+        .bording-cards {
+            margin: 0 8rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        hr {
+            width: 100%;
+            color: black;
+            margin: 4rem 0;
+        }
+    }
+}
+
+.sec-footer-cta {
+    background-color: #f4f8fe;
+    margin-top: 10rem;
+    padding: 5rem 3rem;
+    display: flex;
+    background-image: url("../img/space.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    p {
+        font-weight: 600;
+        color: #888;
+    }
+    @media screen and (max-width:768px) {
+        background-position: 50%;
+        p {
+            font-weight: 600;
+            color: #615f5f;
+        }
+    }
+}
